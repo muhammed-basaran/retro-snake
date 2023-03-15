@@ -1,20 +1,19 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "<snake>/styles/Home.module.css";
 import Header from "../../components/Header";
-import MainHome from "../../components/MainHome";
-import { Fragment } from "react";
 import StartButton from "../../components/StartButton";
-
-const inter = Inter({ subsets: ["latin"] });
+import styled from "styled-components";
 
 export default function Home() {
   return (
-    <Fragment>
+    <StyledMain>
       <Header />
-      <MainHome />
       <StartButton />
-    </Fragment>
+    </StyledMain>
   );
 }
+
+const StyledMain = styled.main`
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+`;
