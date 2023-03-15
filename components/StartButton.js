@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 export default function StartButton() {
   return (
     <StyledSection>
-      <StyledStartButton>START GAME</StyledStartButton>;
+      <Link href="/game">
+        <StyledStartButton>START GAME</StyledStartButton>;
+      </Link>
     </StyledSection>
   );
 }
