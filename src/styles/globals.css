@@ -1,3 +1,5 @@
+@import url("https://www.fontspace.com/public-pixel-font-f72305");
+
 :root {
   --max-width: 1100px;
   --border-radius: 12px;
@@ -121,5 +123,5 @@ a {
 @font-face {
   font-family: "Public Pixel";
   src: local("Public Pixel"),
-    url("https://www.fontspace.com/public-pixel-font-f72305") format("woff2");
+    url("fonts/PublicPixel-z84yD.woff2") format("woff2");
 } ;
