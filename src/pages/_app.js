@@ -1,5 +1,5 @@
-import '<snake>/styles/globals.css'
+import "<snake>/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
