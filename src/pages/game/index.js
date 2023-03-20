@@ -8,8 +8,11 @@ export default function Game() {
       <Header />
       <Link href="/">
         <StyledExitButton> X </StyledExitButton>
-        <StyledScore>Score: </StyledScore>
       </Link>
+      <StyledScore>Score: </StyledScore>
+      <StyledGameFrame>
+        <canvas id="frame" width="480" height="480"></canvas>
+      </StyledGameFrame>
     </StyledMain>
   );
 }
@@ -27,7 +30,8 @@ const StyledMain = styled.main`
 const StyledExitButton = styled.button`
   position: absolute;
   left: 40px;
-  margin-top: -5px;
+  top: 195px;
+  margin-top: 0px;
   padding: 5px;
   font-size: 1.5rem;
   background-color: black;
@@ -41,4 +45,13 @@ const StyledScore = styled.p`
   background-color: black;
   color: white;
   font-family: Public Pixel;
+`;
+
+const StyledGameFrame = styled.section`
+  position: absolute;
+  top: 250px;
+  margin: 20px;
+  border: 2px solid white;
+  width: 90vw;
+  height: 50vh;
 `;

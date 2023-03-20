@@ -5,7 +5,7 @@ export default function StartButton() {
   return (
     <StyledSection>
       <Link href="/game">
-        <StyledStartButton>START GAME</StyledStartButton>;
+        <StyledStartButton>START GAME</StyledStartButton>
       </Link>
     </StyledSection>
   );
