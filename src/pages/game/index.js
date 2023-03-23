@@ -1,15 +1,22 @@
 import Link from "next/link";
 import Header from "../../../components/Header";
 import styled from "styled-components";
+import Canvas from "../../../components/Canvas";
+import { useState } from "react";
 
 export default function Game() {
+  const [points, setPoints] = useState(0);
+
   return (
     <StyledMain>
       <Header />
       <Link href="/">
         <StyledExitButton> X </StyledExitButton>
-        <StyledScore>Score: </StyledScore>
       </Link>
+      <StyledScore>Score: {points} </StyledScore>
+      <StyledGameFrame>
+        <Canvas setPoints={setPoints} points={points} />
+      </StyledGameFrame>
     </StyledMain>
   );
 }
@@ -27,7 +34,8 @@ const StyledMain = styled.main`
 const StyledExitButton = styled.button`
   position: absolute;
   left: 40px;
-  margin-top: -5px;
+  top: 195px;
+  margin-top: 0px;
   padding: 5px;
   font-size: 1.5rem;
   background-color: black;
@@ -41,4 +49,13 @@ const StyledScore = styled.p`
   background-color: black;
   color: white;
   font-family: Public Pixel;
+`;
+
+const StyledGameFrame = styled.section`
+  position: absolute;
+  top: 250px;
+  margin: 20px;
+  border: 4px solid white;
+  width: 90vw;
+  height: 50vh;
 `;
