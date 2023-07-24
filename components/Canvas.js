@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 
-export default function Canvas() {
+export default function Canvas({ points }) {
   let canvasRef = useRef(null);
+  points = 0;
 
   useEffect(() => {
     let canvas = canvasRef.current;
@@ -113,6 +114,7 @@ export default function Canvas() {
           { x: positionSnake[0].x, y: positionSnake[0].y },
           ...positionSnake,
         ];
+        points + 1;
         collected = false;
       }
 

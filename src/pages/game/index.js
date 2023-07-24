@@ -5,17 +5,15 @@ import Canvas from "../../../components/Canvas";
 import { useState } from "react";
 
 export default function Game() {
-  const [points, setPoints] = useState(0);
-
   return (
     <StyledMain>
       <Header />
       <Link href="/">
         <StyledExitButton> X </StyledExitButton>
       </Link>
-      <StyledScore>Score: {points} </StyledScore>
+      <StyledScore>Score: </StyledScore>
       <StyledGameFrame>
-        <Canvas setPoints={setPoints} points={points} />
+        <Canvas />
       </StyledGameFrame>
     </StyledMain>
   );
